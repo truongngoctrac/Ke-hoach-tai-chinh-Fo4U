@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình Bày Kế Hoạch Tài Chính - Công Ty Đại Lý, Giám Định & Phụ Trợ Bảo Hiểm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            min-height: 80vh; /* Adjusted for better visibility */
+            padding: 40px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slide:last-child {
+            border-bottom: none;
+        }
+        .slide-title {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            margin-bottom: 2rem; /* 32px */
+            color: #1e3a8a; /* Dark blue */
+        }
+        .slide-content h3 {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 600;
+            margin-top: 1.5rem; /* 24px */
+            margin-bottom: 0.75rem; /* 12px */
+            color: #1d4ed8; /* Medium blue */
+        }
+        .slide-content p, .slide-content ul {
+            font-size: 1rem; /* 16px */
+            line-height: 1.6;
+            color: #374151; /* Dark gray */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+        .slide-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem; /* 24px */
+        }
+        .slide-content li {
+            margin-bottom: 0.5rem; /* 8px */
+        }
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 50;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-links a {
+            margin-right: 1rem;
+            color: #1e3a8a;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem; /* 24px */
+        }
+        .card {
+            background-color: #f9fafb; /* Light gray background */
+            padding: 1.5rem; /* 24px */
+            border-radius: 0.5rem; /* 8px */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .card h4 {
+            font-size: 1.125rem; /* 18px */
+            font-weight: 600;
+            color: #1e3a8a; /* Dark blue */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+        /* Button to scroll to top */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+        }
+        #scrollTopBtn:hover {
+            background-color: #2563eb;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="nav-bar">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold text-blue-700">Kế Hoạch Tài Chính</div>
+            <div class="nav-links">
+                <a href="#slide1">Giới Thiệu</a>
+                <a href="#slide2">Kế Hoạch</a>
+                <a href="#slide3">Điểm Mạnh</a>
+                <a href="#slide4">Thách Thức</a>
+                <a href="#slide5">Lợi Nhuận</a>
+                <a href="#slide6">Dòng Tiền</a>
+                <a href="#slide7">KPIs</a>
+                <a href="#slide8">Rủi Ro</a>
+                <a href="#slide9">Tổng Kết</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="slide1" class="slide bg-white">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">1. Giới Thiệu Công Ty & Mô Hình Kinh Doanh</h2>
+            <h3>Lĩnh vực hoạt động:</h3>
+            <p>Trung gian bảo hiểm, bao gồm:</p>
+            <ul>
+                <li>Đại lý bảo hiểm (Doanh nghiệp SME/ Bán lẻ/ Online)</li>
+                <li>Giám định rủi ro, tổn thất</li>
+                <li>Tư vấn pháp lý hợp đồng bảo hiểm</li>
+                <li>Dịch vụ thu hộ, đại diện khiếu nại…</li>
+            </ul>
+            <h3>Nguồn thu:</h3>
+            <ul>
+                <li>Hoa hồng từ công ty bảo hiểm</li>
+                <li>Phí giám định</li>
+                <li>Phí tư vấn & dịch vụ hỗ trợ khác</li>
+            </ul>
+            <h3>Khách hàng mục tiêu:</h3>
+            <ul>
+                <li>Cá nhân, hộ gia đình, doanh nghiệp SME</li>
+                <li>Công ty bảo hiểm</li>
+                <li>Tổ chức có nhu cầu xử lý khiếu nại, giám định</li>
+            </ul>
+            <h3>Đề xuất giá trị độc đáo (USP) cần xác định rõ:</h3>
+            <p>Ví dụ: Chuyên môn sâu, quy trình nhanh chóng, công nghệ vượt trội, dịch vụ khách hàng xuất sắc.</p>
+        </div>
+    </section>
+
+    <section id="slide2" class="slide bg-blue-50">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">2. Tóm Tắt Kế Hoạch Tài Chính (Năm Đầu)</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h4>Chi Phí Đầu Tư Ban Đầu: ~570.000.000 VNĐ</h4>
+                    <ul>
+                        <li>Giấy phép kinh doanh: 5.000.000 VNĐ</li>
+                        <li>Trang thiết bị (dự phòng): 30.000.000 VNĐ</li>
+                        <li>Thiết kế nhận diện thương hiệu: 15.000.000 VNĐ</li>
+                        <li>Tuyển dụng, đào tạo đại lý: 20.000.000 VNĐ</li>
+                        <li>Phát triển website bán bảo hiểm online: 500.000.000 VNĐ</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Chi Phí Vận Hành Hàng Tháng: ~45.000.000 VNĐ</h4>
+                    <ul>
+                        <li>Lương nhân sự (1 quản lý): 30.000.000 VNĐ</li>
+                        <li>Thuê văn phòng (co-working): 5.000.000 VNĐ</li>
+                        <li>Marketing, quảng cáo: 1.000.000 VNĐ (cần xem xét tăng)</li>
+                        <li>Chi phí khác (điện thoại, internet, VPP, thuế, duy trì web): ~9.000.000 VNĐ</li>
+                    </ul>
+                     <p class="mt-2"><strong>Tổng chi phí vận hành năm: ~540.000.000 VNĐ</strong></p>
+                </div>
+                 <div class="card">
+                    <h4>Tổng Chi Phí Năm Đầu: ~1.110.000.000 VNĐ</h4>
+                </div>
+                <div class="card">
+                    <h4>Dự Báo Doanh Thu Năm Đầu: ~720.000.000 VNĐ</h4>
+                    <ul>
+                        <li>Đại lý bảo hiểm (sale): 300.000.000 VNĐ</li>
+                        <li>Giám định tổn thất: 240.000.000 VNĐ</li>
+                        <li>Tư vấn dịch vụ khác: 180.000.000 VNĐ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slide3" class="slide bg-white">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">3. Phân Tích Điểm Mạnh & Cơ Hội</h2>
+            <h3>Điểm mạnh:</h3>
+            <ul>
+                <li>Cấu trúc kế hoạch rõ ràng, logic.</li>
+                <li>Mô hình kinh doanh đa dạng nguồn thu, giảm thiểu rủi ro.</li>
+                <li>Chú trọng đầu tư vào công nghệ (website bán hàng online) là bước đi chiến lược.</li>
+                <li>Đã có nhận diện rủi ro cơ bản và các kịch bản tài chính.</li>
+            </ul>
+            <h3>Cơ hội:</h3>
+            <ul>
+                <li>Thị trường bảo hiểm Việt Nam còn nhiều tiềm năng tăng trưởng, đặc biệt là kênh online.</li>
+                <li>Nhu cầu về giám định độc lập và tư vấn pháp lý bảo hiểm ngày càng tăng.</li>
+                <li>Xây dựng USP mạnh có thể tạo lợi thế cạnh tranh khác biệt.</li>
+                <li>Mở rộng mạng lưới đại lý và hợp tác sâu với các công ty bảo hiểm.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="slide4" class="slide bg-green-50">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">4. Các Điểm Cần Cải Thiện & Thách Thức</h2>
+            <h3>Điểm cần cải thiện trong kế hoạch:</h3>
+            <ul>
+                <li>Chi tiết hóa hơn nữa các khoản mục chi phí (thiết bị, website) và cơ sở dự báo doanh thu.</li>
+                <li>Phân tích điểm hòa vốn cần rõ ràng hơn về chi phí cố định và biến đổi.</li>
+                <li>Xây dựng kế hoạch Marketing và Bán hàng chi tiết với ngân sách cụ thể.</li>
+                <li>Lộ trình phát triển nhân sự dài hạn (hiện mới có 1 quản lý).</li>
+                <li>Bổ sung các chỉ số tài chính quan trọng (KPIs) để theo dõi.</li>
+                <li>Liệt kê rõ các giả định cơ sở của kế hoạch.</li>
+            </ul>
+            <h3>Thách thức chính:</h3>
+            <ul>
+                <li>Khó khăn trong việc tìm kiếm khách hàng ban đầu.</li>
+                <li>Chi phí công nghệ lớn, thời gian hoàn vốn kéo dài, rủi ro công nghệ lạc hậu.</li>
+                <li>Cạnh tranh gay gắt từ các nền tảng bán bảo hiểm khác và các công ty lớn.</li>
+                <li>Rủi ro pháp lý và thay đổi quy định ngành.</li>
+                <li>Tuyển dụng và giữ chân nhân tài (sales, giám định viên).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="slide5" class="slide bg-white">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">5. Dự Báo Lợi Nhuận & Các Kịch Bản (Năm Đầu)</h2>
+            <h3>Phân tích Lợi nhuận - Lỗ dự kiến:</h3>
+            <p><strong>Lợi nhuận (lỗ) ròng dự kiến: -390.000.000 VNĐ</strong></p>
+            <ul>
+                <li>Tổng doanh thu: 720.000.000 VNĐ</li>
+                <li>Tổng chi phí năm đầu: 1.110.000.000 VNĐ</li>
+            </ul>
+            <p><em>Nhận xét: Lỗ năm đầu là điều thường thấy ở các startup dịch vụ chuyên môn cao, chủ yếu do chi phí đầu tư nền tảng công nghệ ban đầu lớn.</em></p>
+
+            <h3>Các kịch bản tài chính:</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="py-3 px-4 text-left">Kịch bản</th>
+                            <th class="py-3 px-4 text-left">Doanh thu (VNĐ)</th>
+                            <th class="py-3 px-4 text-left">Chi phí (VNĐ)</th>
+                            <th class="py-3 px-4 text-left">Lợi nhuận ròng (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b">
+                            <td class="py-3 px-4">Cơ sở (hiện tại)</td>
+                            <td class="py-3 px-4">720.000.000</td>
+                            <td class="py-3 px-4">1.110.000.000</td>
+                            <td class="py-3 px-4 text-red-600">-390.000.000</td>
+                        </tr>
+                        <tr class="border-b bg-blue-50">
+                            <td class="py-3 px-4">Tăng trưởng tốt</td>
+                            <td class="py-3 px-4">1.000.000.000</td>
+                            <td class="py-3 px-4">1.150.000.000</td>
+                            <td class="py-3 px-4 text-red-600">-150.000.000</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-3 px-4">Hòa vốn</td>
+                            <td class="py-3 px-4">1.110.000.000</td>
+                            <td class="py-3 px-4">1.110.000.000</td>
+                            <td class="py-3 px-4">0</td>
+                        </tr>
+                        <tr class="bg-red-50">
+                            <td class="py-3 px-4">Rủi ro (doanh thu thấp)</td>
+                            <td class="py-3 px-4">400.000.000</td>
+                            <td class="py-3 px-4">1.110.000.000</td>
+                            <td class="py-3 px-4 text-red-600">-710.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="slide6" class="slide bg-yellow-50">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">6. Kế Hoạch Dòng Tiền & Nhu Cầu Vốn</h2>
+            <h3>Dòng tiền:</h3>
+            <ul>
+                <li><strong>Dòng tiền vào:</strong> Doanh thu từ đại lý bảo hiểm, giám định, tư vấn. Dự kiến tăng trưởng 15-20%/năm tiếp theo.</li>
+                <li><strong>Dòng tiền ra:</strong> Đầu tư ban đầu (570 triệu VNĐ), Chi phí vận hành mỗi tháng (45 triệu VNĐ).</li>
+            </ul>
+            <h3>Lưu ý dòng tiền:</h3>
+            <ul>
+                <li>Cần vốn dự phòng tối thiểu cho 6-12 tháng vận hành để tránh đứt dòng tiền. (Kế hoạch gốc đề xuất 12 tháng).</li>
+                <li>Lập bảng kế hoạch dòng tiền chi tiết hàng tháng/quý.</li>
+            </ul>
+            <h3>Nguồn tài trợ có thể bao gồm:</h3>
+            <ul>
+                <li>Vốn chủ sở hữu</li>
+                <li>Huy động từ bạn bè/đối tác</li>
+                <li>Vay ngân hàng, Quỹ đầu tư khởi nghiệp (Cần kế hoạch chi tiết nếu theo hướng này)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="slide7" class="slide bg-white">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">7. KPIs & Chiến Lược Tăng Trưởng</h2>
+            <h3>Chỉ tiêu hiệu quả dài hạn (cần theo dõi):</h3>
+            <ul>
+                <li><strong>Điểm hòa vốn:</strong> Khoảng 93 triệu VNĐ/tháng doanh thu (1,11 tỷ/năm). Thời gian dự kiến đạt hòa vốn: 12-18 tháng. (Cần xác định rõ chi phí cố định/biến đổi để tính chính xác).</li>
+                <li>Chi phí thu hút một khách hàng mới (CAC)</li>
+                <li>Giá trị vòng đời khách hàng (CLV)</li>
+                <li>Tỷ lệ chuyển đổi (Conversion Rate - online & offline)</li>
+                <li>Tỷ lệ duy trì khách hàng (Customer Retention Rate)</li>
+                <li>Doanh thu trung bình trên mỗi khách hàng (ARPU)</li>
+                <li>Biên lợi nhuận gộp và ròng.</li>
+            </ul>
+            <h3>Chiến lược tăng trưởng:</h3>
+            <ul>
+                <li>Đẩy mạnh marketing kỹ thuật số (SEO, SEM, Social Media) và tối ưu website bán hàng.</li>
+                <li>Mở rộng mạng lưới đại lý chất lượng.</li>
+                <li>Hợp tác sâu rộng và hiệu quả với các công ty bảo hiểm.</li>
+                <li>Phát triển các dịch vụ giám định, tư vấn pháp lý độc đáo, tạo lợi thế cạnh tranh.</li>
+                <li>Tăng cường đào tạo đội ngũ sales và marketing chuyên nghiệp.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="slide8" class="slide bg-red-50">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">8. Rủi Ro Chính & Chiến Lược Kiểm Soát</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h4>Rủi ro chính:</h4>
+                    <ul>
+                        <li>Khó tìm khách hàng ban đầu.</li>
+                        <li>Chi phí công nghệ lớn, hoàn vốn chậm, lạc hậu công nghệ.</li>
+                        <li>Cạnh tranh gay gắt.</li>
+                        <li>Thay đổi pháp lý, quy định ngành.</li>
+                        <li>Tuyển dụng và giữ chân nhân sự giỏi.</li>
+                        <li>Phụ thuộc vào đối tác (công ty bảo hiểm).</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Chiến lược kiểm soát:</h4>
+                    <ul>
+                        <li>Tối ưu chi phí cố định, quản lý dòng tiền chặt chẽ.</li>
+                        <li>Tăng cường tiếp cận online, xây dựng thương hiệu mạnh.</li>
+                        <li>Đào tạo đội ngũ chuyên nghiệp, chính sách đãi ngộ tốt.</li>
+                        <li>Phát triển dịch vụ độc đáo, khác biệt.</li>
+                        <li>Xây dựng mối quan hệ đối tác bền vững.</li>
+                        <li>Đa dạng hóa sản phẩm/dịch vụ.</li>
+                        <li>Luôn cập nhật thay đổi pháp lý.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slide9" class="slide bg-white">
+        <div class="container mx-auto slide-content">
+            <h2 class="slide-title">9. Tổng Kết & Khuyến Nghị Ưu Tiên</h2>
+            <h3>Tổng kết:</h3>
+            <ul>
+                <li>Tổng chi phí năm đầu dự kiến: ~1,11 tỷ VNĐ.</li>
+                <li>Doanh thu kỳ vọng năm đầu: 720 triệu VNĐ.</li>
+                <li>Khoản lỗ dự kiến: khoảng 390 triệu VNĐ (chủ yếu do đầu tư công nghệ).</li>
+                <li>Website bán bảo hiểm là yếu tố chiến lược dài hạn.</li>
+                <li>Điểm hòa vốn dự kiến đạt sau 12-18 tháng nếu doanh thu tăng trưởng tốt.</li>
+            </ul>
+            <h3>Khuyến nghị ưu tiên:</h3>
+            <ol class="list-decimal pl-6">
+                <li><strong>Chi tiết hóa các dự toán:</strong> Cung cấp cơ sở vững chắc cho các con số, đặc biệt là chi phí phát triển website và nguồn gốc của các giả định doanh thu.</li>
+                <li><strong>Xây dựng kế hoạch Marketing & Bán hàng cụ thể:</strong> Phân bổ ngân sách rõ ràng cho từng kênh, đặt mục tiêu cụ thể (KPIs marketing), và chiến lược tiếp cận từng nhóm khách hàng.</li>
+                <li><strong>Theo dõi sát sao dòng tiền:</strong> Lập kế hoạch dòng tiền chi tiết hàng tháng/quý, đảm bảo có đủ vốn lưu động.</li>
+                <li><strong>Xác định rõ các giả định cơ sở:</strong> Liệt kê tất cả các giả định làm nền tảng cho kế hoạch tài chính để dễ dàng theo dõi và điều chỉnh.</li>
+                <li><strong>Tập trung phát triển USP:</strong> Tạo ra lợi thế cạnh tranh thực sự để thu hút và giữ chân khách hàng.</li>
+                <li><strong>Lộ trình nhân sự:</strong> Có kế hoạch rõ ràng cho việc mở rộng đội ngũ song song với tăng trưởng kinh doanh.</li>
+            </ol>
+        </div>
+    </section>
+
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+
+    <footer class="text-center p-6 bg-gray-800 text-white">
+        <p>&copy; 2025 Bản Trình Bày Kế Hoạch Tài Chính. </p>
+    </footer>
+
+    <script>
+        // Scroll to top button functionality
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "flex";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        scrollTopBtn.addEventListener('click', function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                     // Calculate position of target element relative to the viewport
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    // Get current scroll position
+                    const offsetPosition = elementPosition + window.pageYOffset - 80; // 80px for nav height
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
